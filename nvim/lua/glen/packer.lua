@@ -53,5 +53,6 @@ return require("packer").startup(function(use)
     -- git signs
     use("lewis6991/gitsigns.nvim")
 
-  
+    use("glepnir/lspsaga.nvim")
+    
   end)

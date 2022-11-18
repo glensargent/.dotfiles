@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/Users/glensargent/.local/share/nvim/site/pack/packer/start/guihua.lua",
     url = "https://github.com/ray-x/guihua.lua"
   },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/Users/glensargent/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    url = "https://github.com/glepnir/lspsaga.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/glensargent/.local/share/nvim/site/pack/packer/start/lualine.nvim",
