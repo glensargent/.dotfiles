@@ -21,6 +21,8 @@ return require("packer").startup(function(use)
    
     -- configuring lsp servers
     use("neovim/nvim-lspconfig")
+    use('hrsh7th/vim-vsnip')
+    use ('simrat39/rust-tools.nvim')
 
     -- tmux navigation
     use("christoomey/vim-tmux-navigator")
@@ -33,6 +35,8 @@ return require("packer").startup(function(use)
     use("nvim-tree/nvim-web-devicons")
     use("nvim-tree/nvim-tree.lua")
     use("nvim-lualine/lualine.nvim")
+
+    use('nvim-lua/plenary.nvim')
 
     -- fuzzy finding and grepping
     use({"nvim-telescope/telescope-fzf-native.nvim", run = "make"})

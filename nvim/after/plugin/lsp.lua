@@ -49,19 +49,19 @@ require("lspconfig").gopls.setup {
 		},
 	},
 }
-
-require("lspconfig").rust_analyzer.setup{
-	cmd = { "rustup", "run", "nightly", "rust-analyzer" },
-	--[[
-    settings = {
-        rust = {
-            unstable_features = true,
-            build_on_save = false,
-            all_features = true,
-        },
-    }
-    --]]
-}
+-- commented out due to rust-tools plugin
+-- require("lspconfig").rust_analyzer.setup{
+-- 	cmd = { "rustup", "run", "nightly", "rust-analyzer" },
+-- 	--[[
+--     settings = {
+--         rust = {
+--             unstable_features = true,
+--             build_on_save = false,
+--             all_features = true,
+--         },
+--     }
+--     --]]
+-- }
 require("lspconfig").tsserver.setup{
     on_attach = on_attach,
     flags = lsp_flags,
