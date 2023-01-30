@@ -4,6 +4,9 @@ return require("packer").startup(function(use)
     use("wbthomason/packer.nvim")
     use("navarasu/onedark.nvim") -- goated colour scheme
 
+    -- nvim-web-devicons
+    use('nvim-tree/nvim-web-devicons')
+
     -- tree sitter
     use("nvim-treesitter/nvim-treesitter", {
         run = ":TSUpdate"
@@ -32,8 +35,14 @@ return require("packer").startup(function(use)
     use("numToStr/Comment.nvim")
     
     -- nvim file tree and lualine
-    use("nvim-tree/nvim-web-devicons")
-    use("nvim-tree/nvim-tree.lua")
+    use {
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+        'nvim-tree/nvim-web-devicons', -- optional, for file icons
+      },
+      tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    }
+
     use("nvim-lualine/lualine.nvim")
 
     use('nvim-lua/plenary.nvim')
@@ -60,9 +69,6 @@ return require("packer").startup(function(use)
     use({
         "glepnir/lspsaga.nvim",
         branch = "main",
-        config = function()
-            require("lspsaga").setup({})
-        end,
         requires = { {"nvim-tree/nvim-web-devicons"} }
     })
 
