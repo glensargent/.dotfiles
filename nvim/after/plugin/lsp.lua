@@ -1,3 +1,18 @@
+-- lsp zero
+local lsp = require("lsp-zero")
+
+lsp.preset("recommended")
+
+lsp.ensure_installed({
+  'tsserver',
+  'eslint',
+  'sumneko_lua',
+  'rust_analyzer',
+})
+-- end of lsp zero
+
+-- lspconfig
+
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap=true, silent=true }
@@ -66,4 +81,13 @@ require("lspconfig").tsserver.setup{
     on_attach = on_attach,
     flags = lsp_flags,
 }
+
+-- frontend configs
 require("lspconfig").cssls.setup{}
+require("lspconfig").html.setup{}
+require("lspconfig").jsonls.setup{}
+require("lspconfig").yamlls.setup{}
+require("lspconfig").tailwindcss.setup{}
+require("lspconfig").eslint.setup{}
+require("lspconfig").svelte.setup{}
+require("lspconfig").volar.setup{}
