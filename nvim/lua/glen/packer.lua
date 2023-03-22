@@ -4,9 +4,6 @@ return require("packer").startup(function(use)
     use("wbthomason/packer.nvim")
     use("navarasu/onedark.nvim") -- goated colour scheme
 
-    -- nvim-web-devicons
-    use('nvim-tree/nvim-web-devicons')
-
     -- tree sitter
     use("nvim-treesitter/nvim-treesitter", {
         run = ":TSUpdate"
@@ -16,14 +13,9 @@ return require("packer").startup(function(use)
     use("windwp/nvim-ts-autotag")
 
     -- automcompletion
-    use("hrsh7th/cmp-nvim-lsp")
-    use("hrsh7th/cmp-buffer")
-    use("hrsh7th/cmp-path")
-    use("hrsh7th/cmp-cmdline")
     use("hrsh7th/nvim-cmp")
    
     -- configuring lsp servers
-    use("neovim/nvim-lspconfig")
     use('hrsh7th/vim-vsnip')
     use ('simrat39/rust-tools.nvim')
 
@@ -41,8 +33,9 @@ return require("packer").startup(function(use)
         {'hrsh7th/cmp-nvim-lsp'},     -- Required
         {'hrsh7th/cmp-buffer'},       -- Optional
         {'hrsh7th/cmp-path'},         -- Optional
-        {'saadparwaiz1/cmp_luasnip'}, -- Optional
         {'hrsh7th/cmp-nvim-lua'},     -- Optional
+        {'hrsh7th/cmp-cmdline'},      -- Optional
+        {'saadparwaiz1/cmp_luasnip'}, -- Optional
 
         -- Snippets
         {'L3MON4D3/LuaSnip'},             -- Required
