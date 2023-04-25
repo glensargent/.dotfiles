@@ -36,3 +36,6 @@ vim.g.go_gocode_propose_imports = 1 -- Propose imports
 vim.g.go_list_type = "quickfix" -- Show :GoTest and :GoRun errors in the quickfix window
 vim.g.go_doc_keywordprg_enabled = 0 -- remove keyword lookup so lsp can deal with it
 
+-- disable copilot tab setting so it can be remapped
+vim.g.copilot_no_tab_map = true
+
