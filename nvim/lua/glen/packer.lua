@@ -17,7 +17,7 @@ return require("packer").startup(function(use)
    
     -- configuring lsp servers
     use('hrsh7th/vim-vsnip')
-    use ('simrat39/rust-tools.nvim')
+    -- use ('simrat39/rust-tools.nvim')
 
     use {
       'VonHeikemen/lsp-zero.nvim',
@@ -81,12 +81,6 @@ return require("packer").startup(function(use)
 
     -- git signs
     use("lewis6991/gitsigns.nvim")
-
-    use({
-        "glepnir/lspsaga.nvim",
-        branch = "main",
-        requires = { {"nvim-tree/nvim-web-devicons"} }
-    })
 
     -- ai magic
     use("github/copilot.vim")
