@@ -14,7 +14,6 @@ return require("packer").startup(function(use)
 
     -- automcompletion
     use("hrsh7th/nvim-cmp")
-   
     -- configuring lsp servers
     use('hrsh7th/vim-vsnip')
     -- use ('simrat39/rust-tools.nvim')
@@ -46,10 +45,8 @@ return require("packer").startup(function(use)
     -- tmux navigation
     use("christoomey/vim-tmux-navigator")
     use("szw/vim-maximizer")
-    
     -- gcc for quick commenting
     use("numToStr/Comment.nvim")
-    
     -- nvim file tree and lualine
     use {
       'nvim-tree/nvim-tree.lua',
@@ -71,9 +68,7 @@ return require("packer").startup(function(use)
     }
 
 
-
-    use "ray-x/go.nvim"
-    use "ray-x/guihua.lua" -- recommanded if need floating window support
+    use {'fatih/vim-go', run = ':GoUpdateBinaries'}
 
     use 'mfussenegger/nvim-dap'
     use 'theHamsta/nvim-dap-virtual-text'
@@ -84,5 +79,4 @@ return require("packer").startup(function(use)
 
     -- ai magic
     use("github/copilot.vim")
-    
   end)

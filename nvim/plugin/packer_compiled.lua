@@ -129,16 +129,6 @@ _G.packer_plugins = {
     path = "/Users/glensargent/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  ["go.nvim"] = {
-    loaded = true,
-    path = "/Users/glensargent/.local/share/nvim/site/pack/packer/start/go.nvim",
-    url = "https://github.com/ray-x/go.nvim"
-  },
-  ["guihua.lua"] = {
-    loaded = true,
-    path = "/Users/glensargent/.local/share/nvim/site/pack/packer/start/guihua.lua",
-    url = "https://github.com/ray-x/guihua.lua"
-  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/Users/glensargent/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -233,6 +223,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/glensargent/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-go"] = {
+    loaded = true,
+    path = "/Users/glensargent/.local/share/nvim/site/pack/packer/start/vim-go",
+    url = "https://github.com/fatih/vim-go"
   },
   ["vim-maximizer"] = {
     loaded = true,

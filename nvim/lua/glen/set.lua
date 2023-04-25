@@ -28,3 +28,10 @@ vim.opt.splitbelow = true
 
 vim.opt.iskeyword:append("-") -- consider '-' a part of the word
 
+-- vim-go configuration
+vim.g.go_fmt_command = "goimports" -- Configure the formatter to use goimports
+vim.g.go_code_completion_enabled = 0 -- Disable code completion since I use copilot
+-- vim.g.go_auto_sameids = 1 -- Highlight same identifier occurrences
+vim.g.go_gocode_propose_imports = 1 -- Propose imports
+vim.g.go_list_type = "quickfix" -- Show :GoTest and :GoRun errors in the quickfix window
+
