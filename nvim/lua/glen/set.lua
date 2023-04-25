@@ -34,4 +34,5 @@ vim.g.go_code_completion_enabled = 0 -- Disable code completion since I use copi
 -- vim.g.go_auto_sameids = 1 -- Highlight same identifier occurrences
 vim.g.go_gocode_propose_imports = 1 -- Propose imports
 vim.g.go_list_type = "quickfix" -- Show :GoTest and :GoRun errors in the quickfix window
+vim.g.go_doc_keywordprg_enabled = 0 -- remove keyword lookup so lsp can deal with it
 
