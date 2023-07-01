@@ -26,8 +26,6 @@ vim.opt.clipboard:append("unnamedplus")
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
-vim.opt.iskeyword:append("-") -- consider '-' a part of the word
-
 -- vim-go configuration
 vim.g.go_fmt_command = "goimports" -- Configure the formatter to use goimports
 vim.g.go_code_completion_enabled = 0 -- Disable code completion since I use copilot
