@@ -19,12 +19,12 @@ vim.opt.smartcase = true
 -- backspace
 vim.opt.backspace = "indent,eol,start"
 
--- clipboard
-vim.opt.clipboard:append("unnamedplus")
-
 -- split windows
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+
+-- clipboard
+vim.opt.clipboard:append("unnamedplus")
 
 -- vim-go configuration
 vim.g.go_fmt_command = "goimports" -- Configure the formatter to use goimports
