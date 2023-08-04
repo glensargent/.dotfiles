@@ -13,6 +13,18 @@ lsp.ensure_installed({
 
 lsp.setup()
 
+require('lspconfig').gopls.setup({
+  cmd = {"/opt/homebrew/bin/gopls"},
+  settings = {
+    gopls = {
+      analyses = {
+        unusedparams = true,
+      },
+      staticcheck = true,
+    },
+  },
+})
+
 vim.diagnostic.config({
   virtual_text = true
 })
