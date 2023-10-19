@@ -9,6 +9,7 @@ lsp.ensure_installed({
   'lua_ls',
   'rust_analyzer',
   'gopls',
+  'hls'
 })
 
 lsp.setup()
