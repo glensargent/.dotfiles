@@ -20,12 +20,12 @@ return require("packer").startup(function(use)
 
     use {
       'VonHeikemen/lsp-zero.nvim',
-      branch = 'v2.x',
+      branch = 'v3.x',
       requires = {
         -- LSP Support
         {'neovim/nvim-lspconfig'},             -- Required
-        {'williamboman/mason.nvim'},           -- Optional
-        {'williamboman/mason-lspconfig.nvim'}, -- Optional
+        -- {'williamboman/mason.nvim'},           -- Optional
+        -- {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
         -- Autocompletion
         {'hrsh7th/nvim-cmp'},         -- Required
