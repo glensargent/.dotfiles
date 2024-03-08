@@ -67,12 +67,7 @@ return require("packer").startup(function(use)
       requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-
     use {'fatih/vim-go', run = ':GoUpdateBinaries'}
-
-    use 'mfussenegger/nvim-dap'
-    use 'theHamsta/nvim-dap-virtual-text'
-    use 'rcarriga/nvim-dap-ui'
 
     -- git signs
     use("lewis6991/gitsigns.nvim")
