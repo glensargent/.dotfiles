@@ -38,8 +38,32 @@ require('lspconfig').tsserver.setup({
       enable = true,
     },
   },
+  init_options = {
+    plugins = {
+      {
+        name = "@vue/typescript-plugin",
+        location = "/opt/homebrew/lib/node_modules/@vue/typescript-plugin",
+        languages = {"javascript", "typescript", "vue"},
+      },
+    },
+  },
+  filetypes = {
+    "javascript",
+    "typescript",
+    "vue",
+  },
 })
 
+require'lspconfig'.volar.setup{
+  filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'},
+  init_options = {
+    typescript = {
+      tsdk = '/opt/homebrew/lib/node_modules/typescript/lib'
+    },
+  },
+}
+
+require'lspconfig'.tailwindcss.setup{}
 
 vim.diagnostic.config({
   virtual_text = true
