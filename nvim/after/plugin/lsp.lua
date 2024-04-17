@@ -10,6 +10,7 @@ lsp.on_attach(function(client, bufnr)
   })
 end)
 
+
 require('lspconfig').gopls.setup({
   cmd = {"/opt/homebrew/bin/gopls"},
   settings = {
@@ -62,6 +63,8 @@ require'lspconfig'.volar.setup{
     },
   },
 }
+
+require('lspconfig').rust_analyzer.setup{}
 
 require'lspconfig'.tailwindcss.setup{}
 
