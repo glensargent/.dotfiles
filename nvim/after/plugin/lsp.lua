@@ -1,5 +1,7 @@
 -- lsp zero
-local lsp = require("lsp-zero")
+local lsp = require 'lsp-zero'
+local lspconfig = require 'lspconfig'
+local configs = require 'lspconfig.configs'
 
 lsp.on_attach(function(client, bufnr)
   -- see :help lsp-zero-keybindings
@@ -11,7 +13,7 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 
-require('lspconfig').gopls.setup({
+lspconfig.gopls.setup({
   cmd = {"/opt/homebrew/bin/gopls"},
   settings = {
     gopls = {
@@ -23,7 +25,7 @@ require('lspconfig').gopls.setup({
   },
 })
 
-require('lspconfig').hls.setup({
+lspconfig.hls.setup({
   filetypes = { "haskell", "lhaskell", "cabal" },
   settings = {
     haskell = {
@@ -33,7 +35,7 @@ require('lspconfig').hls.setup({
   },
 })
 
-require('lspconfig').tsserver.setup({
+lspconfig.tsserver.setup({
   settings = {
     format = {
       enable = true,
@@ -64,9 +66,23 @@ require'lspconfig'.volar.setup{
   },
 }
 
-require('lspconfig').rust_analyzer.setup{}
+lspconfig.rust_analyzer.setup{}
 
-require'lspconfig'.tailwindcss.setup{}
+lspconfig.tailwindcss.setup{}
+
+configs.roc = {
+  default_config = {
+    cmd = {"/Users/glensargent/Documents/roc_nightly-macos_apple_silicon-2024-05-06-5984e4c585d/roc_language_server"},
+    filetypes = { 'roc' },
+    root_dir = lspconfig.util.root_pattern 'main.roc',
+  },
+}
+
+lspconfig.roc.setup{}
+-- set the filetype for roc files so that the lsp can actually be used
+vim.cmd [[
+  autocmd BufRead,BufNewFile *.roc set filetype=roc
+]]
 
 vim.diagnostic.config({
   virtual_text = true
