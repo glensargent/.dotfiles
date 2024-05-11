@@ -84,6 +84,8 @@ vim.cmd [[
   autocmd BufRead,BufNewFile *.roc set filetype=roc
 ]]
 
+require'lspconfig'.ocamllsp.setup{}
+
 vim.diagnostic.config({
   virtual_text = true
 })
