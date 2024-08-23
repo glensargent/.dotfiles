@@ -35,6 +35,7 @@ lspconfig.hls.setup({
   },
 })
 
+lspconfig.tailwindcss.setup{}
 lspconfig.tsserver.setup({
   settings = {
     format = {
@@ -68,7 +69,7 @@ require'lspconfig'.volar.setup{
 
 lspconfig.rust_analyzer.setup{}
 
-lspconfig.tailwindcss.setup{}
+lspconfig.elmls.setup{}
 
 configs.roc = {
   default_config = {
@@ -84,7 +85,8 @@ vim.cmd [[
   autocmd BufRead,BufNewFile *.roc set filetype=roc
 ]]
 
-require'lspconfig'.ocamllsp.setup{}
+lspconfig.ocamllsp.setup{}
+lspconfig.gleam.setup{}
 
 vim.diagnostic.config({
   virtual_text = true
