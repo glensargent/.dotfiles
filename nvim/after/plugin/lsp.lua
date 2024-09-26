@@ -87,6 +87,10 @@ vim.cmd [[
 
 lspconfig.ocamllsp.setup{}
 lspconfig.gleam.setup{}
+lspconfig.terraformls.setup{}
+lspconfig.elixirls.setup{
+  cmd = { "/opt/homebrew/bin/elixir-ls" }
+}
 
 vim.diagnostic.config({
   virtual_text = true
