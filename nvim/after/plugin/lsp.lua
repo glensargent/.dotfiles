@@ -36,7 +36,7 @@ lspconfig.hls.setup({
 })
 
 lspconfig.tailwindcss.setup{}
-lspconfig.tsserver.setup({
+lspconfig.ts_ls.setup({
   settings = {
     format = {
       enable = true,
