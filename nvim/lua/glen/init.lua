@@ -1,3 +1,3 @@
 require("glen.set")
-require("glen.packer")
 require("glen.keymap")
+require("glen.lazy_init")
