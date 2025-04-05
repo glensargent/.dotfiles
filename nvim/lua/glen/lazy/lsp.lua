@@ -76,7 +76,7 @@ return {
       },
     })
 
-    require'lspconfig'.volar.setup{
+    lspconfig.volar.setup{
       filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'},
       init_options = {
         typescript = {
@@ -109,6 +109,8 @@ return {
     lspconfig.elixirls.setup{
       cmd = { "/opt/homebrew/bin/elixir-ls" }
     }
+
+    lspconfig.svelte.setup{}
 
     vim.diagnostic.config({
       virtual_text = true
