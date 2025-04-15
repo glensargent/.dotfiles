@@ -27,8 +27,6 @@ return {
     -- See :h blink-cmp-config-keymap for defining your own keymap
     keymap = { 
       preset = 'default',
-      ['<Tab>'] = { 'accept' }, -- Accept the currently selected item
-
     },
 
     appearance = {
@@ -36,6 +34,8 @@ return {
       -- Adjusts spacing to ensure icons are aligned
       nerd_font_variant = 'mono'
     },
+
+    signature = { enabled = true },
 
     -- (Default false) Only show the documentation popup when manually triggered
     completion = { documentation = { auto_show = true } },
