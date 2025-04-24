@@ -101,4 +101,36 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 alias vim='nvim'
+alias vi='vim'
+alias v='vim'
 export EDITOR='nvim'
+export USE_GKE_CLOUD_AUTH_PLUGIN=True
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+alias k='kubectl'
+alias kx='kubectx'
+
+# Wasmer
+export WASMER_DIR="/Users/glensargent/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+
+[ -f "/Users/glensargent/.ghcup/env" ] && source "/Users/glensargent/.ghcup/env" # ghcup-env
+
+# bun completions
+[ -s "/Users/glensargent/.bun/_bun" ] && source "/Users/glensargent/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+# roc
+export PATH="/Users/glensargent/Documents/roc_nightly-macos_apple_silicon-2024-05-06-5984e4c585d:$PATH"
+
+# opam configuration
+[[ ! -r /Users/glensargent/.opam/opam-init/init.zsh ]] || source /Users/glensargent/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+eval "$(starship init zsh)"
+
+# export WASMTIME_HOME="$HOME/.wasmtime"
+# export PATH="$WASMTIME_HOME/bin:$PATH"
+# source "/Users/glensargent/.ghc-wasm/env"
