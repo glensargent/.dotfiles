@@ -1,0 +1,8 @@
+theme = catppuccin-frappe
+background = 232b39
+window-padding-x = 12
+window-padding-y = 12,0
+font-feature = -calt
+font-feature = -dlig
+font-feature = -liga
+window-decoration = false
