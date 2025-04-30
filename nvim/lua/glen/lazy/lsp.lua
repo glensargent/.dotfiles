@@ -75,6 +75,7 @@ return {
     lspconfig.elixirls.setup{
       cmd = { "/opt/homebrew/bin/elixir-ls" }
     }
+    lspconfig.cssls.setup{}
 
     vim.diagnostic.config({
       virtual_text = true
