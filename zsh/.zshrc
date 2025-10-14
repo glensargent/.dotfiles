@@ -110,6 +110,8 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 
 alias k='kubectl'
 alias kx='kubectx'
+alias t='talosctl'
+alias ai='crush'
 
 # Wasmer
 export WASMER_DIR="/Users/glensargent/.wasmer"
@@ -125,12 +127,15 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 # roc
 export PATH="/Users/glensargent/Documents/roc_nightly-macos_apple_silicon-2024-05-06-5984e4c585d:$PATH"
-
+# spacetime
+export PATH="/Users/glensargent/.local/bin:$PATH"
 # opam configuration
 [[ ! -r /Users/glensargent/.opam/opam-init/init.zsh ]] || source /Users/glensargent/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 eval "$(starship init zsh)"
 
+source /Users/glensargent/.zsh_keys
+
+export TALOSCONFIG=talosconfig
+
 # export WASMTIME_HOME="$HOME/.wasmtime"
-# export PATH="$WASMTIME_HOME/bin:$PATH"
-# source "/Users/glensargent/.ghc-wasm/env"
