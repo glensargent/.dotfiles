@@ -10,6 +10,7 @@ return {
                 "html",
                 "css",
                 "typescript",
+                "tsx",
                 "go",
                 "vue",
                 "svelte",
