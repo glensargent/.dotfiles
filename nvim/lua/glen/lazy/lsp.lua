@@ -113,6 +113,12 @@ return {
       root_markers = { "package.json", ".git" },
     }
 
+    vim.lsp.config.cl_lsp = {
+      cmd = { "cl-lsp" },
+      filetypes = { "lisp" },
+      root_markers = { "*.asd", ".git" },
+    }
+
     -- Enable LSP servers
     vim.lsp.enable('gopls')
     vim.lsp.enable('hls')
@@ -127,6 +133,7 @@ return {
     vim.lsp.enable('terraformls')
     vim.lsp.enable('elixirls')
     vim.lsp.enable('cssls')
+    vim.lsp.enable('cl_lsp')
 
     vim.diagnostic.config({
       virtual_text = true
